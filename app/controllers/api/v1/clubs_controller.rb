@@ -14,7 +14,7 @@ end
 
 # PUT api/v1/players/:id
 def update
-    if club.update(post_params)
+    if @club.update(post_params)
         render json: @club, status: :ok
     else
         render json @club.errors, status: :update_error
@@ -31,6 +31,13 @@ def destroy # add delete with foreign keys after
         render json: @club, status: :delete_error
     end
 
+end
+
+# testing
+def getVehicule
+    id = params[:id].to_i
+    @v  = Vehicule.find(id)
+    render json: @v
 end
 ################################################################
 def set_club

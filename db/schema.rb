@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_11_215607) do
+ActiveRecord::Schema.define(version: 2018_10_01_153831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,21 @@ ActiveRecord::Schema.define(version: 2018_09_11_215607) do
     t.bigint "competition_id"
     t.index ["competition_id"], name: "index_rencontres_on_competition_id"
     t.index ["match_id"], name: "index_rencontres_on_match_id"
+  end
+
+  create_table "vehicules", force: :cascade do |t|
+    t.integer "immat"
+    t.string "chassis"
+    t.string "couleur"
+    t.string "anc_immat"
+    t.string "ptac"
+    t.string "model"
+    t.integer "places"
+    t.integer "puissance"
+    t.integer "cheveaux"
+    t.date "date_carte_grise"
+    t.date "dmc"
+    t.integer "marque"
   end
 
   add_foreign_key "compclubs", "clubs"

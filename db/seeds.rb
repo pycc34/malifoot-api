@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Club.create(name: "Djoliba", logo: "logo djoliba", description: "equipe creer vers les annees 60, se trouve au coeur de bamako", stadium: "Heremakono")
 Player.create(name: "massire dembele",age: 20,position: "milieu", foot: "droit", country: "Mali",club_id: 1)
+Vehicule.create(immat:"www",chassis: "rrfff",couleur: "fggg",anc_immat: "ffggh",ptac:"dddf",model: "fgggh", places: 5,puissance: 5, cheveaux: 5, date_carte_grise: Date.today,dmc: Date.today, marque: 1);
